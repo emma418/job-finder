@@ -1,7 +1,13 @@
-<<<<<<< HEAD
+
 # JobSearchApplication
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
+
+## Features
+
+- **Home Page**: A welcoming landing page with introductory text and a call-to-action button to start job searching.
+- **Job Search**: A dedicated page to search and filter job opportunities.
+- **Contact Form**: A form to submit user feedback or contact information, with validation and feedback messages.
 
 ## Development server
 
@@ -28,4 +34,3 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 =======
 # job-finder
->>>>>>> e264249c2dd66e99a8a24d92cf74bdbe12b18b75

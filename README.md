@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # JobSearchApplication
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
@@ -25,3 +26,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+=======
+# job-finder
+>>>>>>> e264249c2dd66e99a8a24d92cf74bdbe12b18b75

@@ -1,0 +1,8 @@
+<div class="job-search-container">
+    <input type="text" [(ngModel)]="searchQuery" placeholder="Search for jobs..." class="job-search-input" />
+    <button (click)="searchJobs()" class="job-search-button">Search</button>
+  </div>
+  <app-job-list [jobs]="jobs"></app-job-list>
+  
+  
+  

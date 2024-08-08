@@ -1,0 +1,26 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+  }
+  
+  .p-field {
+    margin-bottom: 1rem;
+  }
+  
+  .p-error {
+    color: red;
+  }
+  
+  input, textarea {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  textarea {
+    height: 150px;
+  }
+  

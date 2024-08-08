@@ -1,0 +1,48 @@
+<div class="card-container">
+    <div *ngFor="let job of jobs" class="card-item">
+      <p-card class="p-card">
+        <div class="job-title">{{ job.title }}</div>
+        <div class="job-subheader">{{ job.company }}</div>
+        <p class="job-description">{{ stripHtmlTags(job.description) }}</p>
+        <div class="job-city">
+          <i class="pi pi-building"></i> {{ job.region }}
+        </div>
+        <ng-template pTemplate="footer">
+          <div class="flex gap-3 mt-1">
+            <p-button label="Detail" severity="secondary" class="w-full" (click)="showDialog(job)"></p-button>
+            <a [href]="job.apply_url" target="_blank">
+              <p-button label="Apply" class="w-full"></p-button>
+            </a>
+          </div>
+        </ng-template>
+      </p-card>
+    </div>
+  
+    <!-- Dialog for Job Details -->
+    <p-dialog 
+      header="{{ selectedJob?.title }}" 
+      [(visible)]="visible" 
+      [modal]="true" 
+      [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }" 
+      [style]="{ width: '50rem' }" 
+      [draggable]="false" 
+      [resizable]="false"
+      [maskStyle]="{ backgroundColor: 'rgba(0, 0, 0, 0.1)' }">
+      <app-job-detail [job]="selectedJob" (close)="hideDialog()"></app-job-detail>
+    </p-dialog>
+  </div>
+  
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

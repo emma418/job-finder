@@ -1,0 +1,48 @@
+<div class="container">
+    <h2>Contact Us</h2>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div class="p-fluid">
+        <div class="p-field">
+          <label for="name">Name</label>
+          <input id="name" type="text" pInputText formControlName="name" />
+          <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="p-error">
+            Name is required.
+          </div>
+        </div>
+  
+        <div class="p-field">
+          <label for="email">Email</label>
+          <input id="email" type="email" pInputText formControlName="email" />
+          <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="p-error">
+            <div *ngIf="contactForm.get('email')?.errors?.['required']">Email is required.</div>
+            <div *ngIf="contactForm.get('email')?.errors?.['email']">Invalid email format.</div>
+          </div>
+        </div>
+  
+        <div class="p-field">
+          <label for="message">Message</label>
+          <textarea id="message" pInputTextarea formControlName="message"></textarea>
+          <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="p-error">
+            Message is required.
+          </div>
+        </div>
+  
+        <div class="p-field">
+          <button pButton type="submit" label="Submit" [disabled]="contactForm.invalid"></button>
+        </div>
+      </div>
+    </form>
+  
+    <p-dialog header="Thank You" [(visible)]="displayDialog" modal="modal" [closable]="false" [dismissableMask]="true" [responsive]="true" [style]="{width: '300px'}">
+      <p>Thank you for contacting us.</p>
+      <p-footer>
+        <button pButton type="button" label="Close" (click)="closeDialog()"></button>
+      </p-footer>
+    </p-dialog>
+  </div>
+  
+  
+  
+  
+  
+  
